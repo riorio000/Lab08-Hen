@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>My Classes</h1>
+<ul>
+    {% for cls in classes %}
+        <li><a href="{{ url_for('teacher.class_details', class_id=cls.id) }}">{{ cls.name }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

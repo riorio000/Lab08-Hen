@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to the Home Page</h1>
+    <div class="container">
+        <a class="button" href="{{url_for('views.home')}}">Click Me</a>
+    </div>
+</body>
+{% endblock %}
