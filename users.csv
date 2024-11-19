@@ -1,0 +1,11 @@
+id,username,password,role
+1,johndoe,password123,student
+2,janedoe,securepass456,student
+3,teacherjohn,teachpass789,teacher
+4,adminjane,adminpass101,admin
+5,studentalice,alicepass202,student
+6,teacherlisa,teachlisa303,teacher
+7,adminmike,adminmike404,admin
+8,studentbob,bobpass505,student
+9,teacheremma,teachpass606,teacher
+10,adminalex,adminpass707,admin
