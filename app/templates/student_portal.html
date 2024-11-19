@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Your Classes</h1>
+<ul>
+    {% for cls in student_classes %}
+        <li>{{ cls.class.name }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Available Classes</h2>
+<ul>
+    {% for cls in offered_classes %}
+        <li>{{ cls.name }} 
+            <a href="{{ url_for('student.enroll_class', class_id=cls.id) }}">Enroll</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
