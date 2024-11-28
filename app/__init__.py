@@ -6,9 +6,12 @@ from .models import db, bcrypt
 from .routes.admin_routes import setup_admin
 from .routes.general_routes import general_blueprint
 from .views import views
+import os
 
 def create_app():
-    app = Flask(__name__, template_folder='templates')
+    app = Flask(__name__, 
+                template_folder=os.path.join(os.path.dirname(__file__), 'templates'),
+                static_folder=os.path.join(os.path.dirname(__file__), 'static'))  # Explicitly set static folder
     app.config.from_object('config.Config')
 
     db.init_app(app)
@@ -17,7 +20,7 @@ def create_app():
 
     login_manager = LoginManager()
     login_manager.init_app(app)
-    login_manager.login_view = "login"
+    login_manager.login_view = "views.login"  
 
     from .models import User
 
